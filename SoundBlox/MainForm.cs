@@ -60,13 +60,19 @@ namespace SoundBlox
         private void transfersounds_Click(object sender, EventArgs e)
         {
             TransferSounds tfs = new TransferSounds();
-            tfs.Show();
+            tfs.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Converter cv = new Converter();
-            cv.Show();
+            cv.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Credits c = new Credits();
+            c.ShowDialog();
         }
     }
 }

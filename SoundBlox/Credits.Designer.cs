@@ -33,8 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -81,30 +79,10 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "- FFmpeg Downloader";
             // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(12, 83);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(67, 13);
-            this.linkLabel3.TabIndex = 4;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "FFmpegCore";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "- FFmpeg interaction library";
-            // 
             // linkLabel4
             // 
             this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(12, 109);
+            this.linkLabel4.Location = new System.Drawing.Point(12, 76);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(52, 13);
             this.linkLabel4.TabIndex = 6;
@@ -115,7 +93,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 109);
+            this.label4.Location = new System.Drawing.Point(70, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(194, 13);
             this.label4.TabIndex = 7;
@@ -124,7 +102,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(85, 143);
+            this.label5.Location = new System.Drawing.Point(102, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 8;
@@ -133,7 +111,7 @@
             // linkLabel5
             // 
             this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(12, 143);
+            this.linkLabel5.Location = new System.Drawing.Point(12, 103);
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.Size = new System.Drawing.Size(69, 13);
             this.linkLabel5.TabIndex = 9;
@@ -150,8 +128,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.linkLabel4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label1);
@@ -170,8 +146,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
