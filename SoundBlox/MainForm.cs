@@ -48,7 +48,7 @@ namespace SoundBlox
       
             
              WebClient wc = new WebClient();
-            RobloxSoundDir = wc.DownloadString(@"https://raw.githubusercontent.com/Awire9966/SoundBlox/main/roblox").Replace("{APPDATA}", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).Replace("{LOCALAPPDATA}", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+            RobloxSoundDir = wc.DownloadString(@"https://raw.githubusercontent.com/Awire9966/SoundBlox/main/roblox").Replace("{APPDATA}", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).Replace("{LOCALAPPDATA}", Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
             vars.RobloxSoundDir = RobloxSoundDir;
             BUILTINSOUNDS.Url = new Uri(vars.SoundBloxDir_Sounds);
             FEXSOUNDS.Url = new Uri(RobloxSoundDir);
