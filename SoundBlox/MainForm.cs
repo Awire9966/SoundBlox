@@ -67,6 +67,7 @@ namespace SoundBlox
             if(!(vars.MOTD == File.ReadAllText(vars.MOTD_DIR)))
             {
                 MessageBox.Show(vars.MOTD, "Message");
+                File.WriteAllText(vars.MOTD_DIR, vars.MOTD);
             }
             vars.RobloxSoundDir = RobloxSoundDir;
             BUILTINSOUNDS.Url = new Uri(vars.SoundBloxDir_Sounds);
