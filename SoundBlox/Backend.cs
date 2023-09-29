@@ -13,7 +13,10 @@ namespace SoundBlox
         public static string SoundBloxDir_Sounds = CurrentPath + @"\sounds";
         public static string SoundBlox_FFMPEG = CurrentPath + @"\ffmpeg.exe";
         public static string RobloxSoundDir;
-      
+        public static string MOTD_DIR = CurrentPath + @"\.motd";
+        public static string MOTD;
+        public static int CurrentVersion = 3;
+
     }
     public static class OINT
     {

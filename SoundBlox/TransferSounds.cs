@@ -36,7 +36,7 @@ namespace SoundBlox
         }
         private void button1_Click(object sender, EventArgs e)
         {
-           File.Copy(comboBox1.Text, comboBox2.Text);
+           File.Copy(vars.SoundBloxDir_Sounds + comboBox1.Text, vars.RobloxSoundDir + comboBox2.Text);
         }
     }
 }
