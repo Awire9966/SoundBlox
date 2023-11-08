@@ -49,14 +49,8 @@ namespace SoundBlox
         private void button3_Click(object sender, EventArgs e)
         {
 
-            if (textBox1.Text.Contains(" ") || textBox2.Text.Contains(" "))
-            {
-                MessageBox.Show("Path cannont have spaces", "oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                Process.Start(vars.SoundBlox_FFMPEG, "-i " + textBox1.Text + " " + textBox2.Text);
-            }
+                Process.Start(vars.SoundBlox_FFMPEG, "-i \"" + textBox1.Text + "\" \"" + textBox2.Text + "\"");
+            
             }
     }
 }
