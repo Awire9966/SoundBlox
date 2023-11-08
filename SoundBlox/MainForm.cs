@@ -52,7 +52,16 @@ namespace SoundBlox
             RobloxSoundDir = wc.DownloadString(@"https://raw.githubusercontent.com/Awire9966/SoundBlox/main/roblox").Replace("{APPDATA}", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).Replace("{LOCALAPPDATA}", Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
             int LatestVers = int.Parse(wc.DownloadString("https://raw.githubusercontent.com/Awire9966/SoundBlox/main/version"));
             vars.MOTD = wc.DownloadString("https://raw.githubusercontent.com/Awire9966/SoundBlox/main/message");
-            if(LatestVers > vars.CurrentVersion)
+            if (!File.Exists(vars.MOTD_DIR))
+            {
+                File.WriteAllText(vars.MOTD_DIR, "");
+            }
+            if (!(vars.MOTD == File.ReadAllText(vars.MOTD_DIR)))
+            {
+                MessageBox.Show(vars.MOTD, "Message");
+                File.WriteAllText(vars.MOTD_DIR, vars.MOTD);
+            }
+            if (LatestVers > vars.CurrentVersion)
             {
                 var res = MessageBox.Show("New Update! Download?","Update!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if(res == DialogResult.Yes)
@@ -60,15 +69,7 @@ namespace SoundBlox
                     Process.Start("https://github.com/Awire9966/SoundBlox");
                 }  
             }
-            if(!File.Exists(vars.MOTD_DIR))
-            {
-                File.WriteAllText(vars.MOTD_DIR, "");
-            }
-            if(!(vars.MOTD == File.ReadAllText(vars.MOTD_DIR)))
-            {
-                MessageBox.Show(vars.MOTD, "Message");
-                File.WriteAllText(vars.MOTD_DIR, vars.MOTD);
-            }
+           
             vars.RobloxSoundDir = RobloxSoundDir;
             BUILTINSOUNDS.Url = new Uri(vars.SoundBloxDir_Sounds);
             FEXSOUNDS.Url = new Uri(RobloxSoundDir);
