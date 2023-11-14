@@ -49,7 +49,7 @@ namespace SoundBlox
       
             
              WebClient wc = new WebClient();
-            RobloxSoundDir = wc.DownloadString(@"https://raw.githubusercontent.com/Awire9966/SoundBlox/main/roblox").Replace("{APPDATA}", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).Replace("{LOCALAPPDATA}", Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
+            RobloxSoundDir = (wc.DownloadString(@"https://raw.githubusercontent.com/Awire9966/SoundBlox/main/roblox").Replace("{APPDATA}", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).Replace("{LOCALAPPDATA}", Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)));
             int LatestVers = int.Parse(wc.DownloadString("https://raw.githubusercontent.com/Awire9966/SoundBlox/main/version"));
             vars.MOTD = wc.DownloadString("https://raw.githubusercontent.com/Awire9966/SoundBlox/main/message");
             if (!File.Exists(vars.MOTD_DIR))

@@ -15,7 +15,7 @@ namespace SoundBlox
         public static string RobloxSoundDir;
         public static string MOTD_DIR = CurrentPath + @"\.motd";
         public static string MOTD;
-        public static int CurrentVersion = 4;
+        public static int CurrentVersion = 5;
 
     }
     public static class OINT

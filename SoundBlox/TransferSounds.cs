@@ -36,7 +36,8 @@ namespace SoundBlox
         }
         private void button1_Click(object sender, EventArgs e)
         {
-           File.Copy(vars.SoundBloxDir_Sounds + comboBox1.Text, vars.RobloxSoundDir + comboBox2.Text);
+            File.Delete((vars.RobloxSoundDir + @"\" + comboBox2.Text).Replace("\a", "").Replace("\b", "").Replace("\f", "").Replace("\n", "").Replace("\r", "").Replace("\t", "").Replace("\v", ""));
+            File.Copy((vars.SoundBloxDir_Sounds + @"\"+ comboBox1.Text).Replace("\a", "").Replace("\b", "").Replace("\f", "").Replace("\n", "").Replace("\r", "").Replace("\t", "").Replace("\v", ""), (vars.RobloxSoundDir +@"\"+ comboBox2.Text).Replace("\a", "").Replace("\b", "").Replace("\f", "").Replace("\n", "").Replace("\r", "").Replace("\t", "").Replace("\v", "")); ;
         }
     }
 }
